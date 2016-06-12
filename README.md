@@ -4,7 +4,7 @@ Playgrounds aren't easy to create. Xcode requires you to pick a name and locatio
 
 When there's something you *need* to rapidly try and test, it may be frustrating to go through that many steps.
 
-Play will create a new playground in your `/Desktop` properly named and will open it right away. All you need to do is type `Play` on your Spotlight Search bar and tap Enter.
+Play will create a new playground in your `/Desktop` conveniently named and will open it right away. All you need to do is type `Play` on your Spotlight Search bar and tap Enter.
 
 ![gif](http://cl.ly/3O3t2F2Z1e2W/download/Screen%20Recording%202016-06-12%20at%2008.32%20PM.gif)
 
