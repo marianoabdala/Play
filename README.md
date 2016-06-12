@@ -6,6 +6,7 @@ When there's something you *need* to rapidly try and test, it may be frustrating
 
 Play will create a new playground in your `/Desktop` properly named and will open it right away. All you need to do is type `Play` on your Spotlight Search bar and tap Enter.
 
+![gif](http://cl.ly/3O3t2F2Z1e2W/download/Screen%20Recording%202016-06-12%20at%2008.32%20PM.gif)
 
 # Instalation
 1. Download [zip](https://github.com/marianoabdala/Play/releases/download/1.0/Play.zip).
