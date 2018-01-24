@@ -3,16 +3,13 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-
-        let originalPlaygroundPath = NSBundle.mainBundle().pathForResource("MyPlayground", ofType: "playground")!
-        let newPlaygroundPath = NSHomeDirectory().stringByAppendingString("/Desktop/\(self.newPlaygroundName()).playground")
+        let originalPlaygroundPath = Bundle.main.path(forResource: "MyPlayground", ofType: "playground")
+        let newPlaygroundPath = NSHomeDirectory() + "/Desktop/\(self.newPlaygroundName()).playground"
+        try? FileManager.default.copyItem(atPath: originalPlaygroundPath!, toPath: newPlaygroundPath)
         
-        try! NSFileManager.defaultManager().copyItemAtPath(originalPlaygroundPath, toPath: newPlaygroundPath)
-        
-        let openTask = NSTask()
+        let openTask = Process()
         openTask.launchPath = "/usr/bin/open"
         openTask.arguments = [newPlaygroundPath]
         openTask.launch()
@@ -27,9 +24,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func newPlaygroundName() -> String {
         
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "mm-dd hh.mm.ss"
         
-        return "MyPlayground from \(dateFormatter.stringFromDate(NSDate()))"
+        return "MyPlayground from \(dateFormatter.string( from: Date()))"
     }
 }
