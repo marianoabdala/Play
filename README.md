@@ -10,7 +10,7 @@ Play will create a new playground in your `/Desktop` conveniently named and will
 
 Note: Gif recording and hosting are "Powered by CloudApp", not this tool.
 
-# Instalation
+# Installation
 1. Download [zip](https://github.com/marianoabdala/Play/releases/download/1.0/Play.zip).
 2. Unzip.
 3. Locate wherever you like best.
